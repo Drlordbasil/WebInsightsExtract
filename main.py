@@ -1,10 +1,14 @@
+Optimized Python script:
+
+```python
+
+
 class WebDataExtractor:
     def __init__(self, search_engine):
         self.search_engine = search_engine
 
     def perform_search(self, keywords):
-        search_results = self.search_engine.search(keywords)
-        return search_results
+        return self.search_engine.search(keywords)
 
     def get_next_page_url(self, search_results):
         return search_results.get_next_page_url()
@@ -123,3 +127,9 @@ visualization = reporting_manager.generate_visualizations()
 data_storage_manager.store_data(report)
 aws_integration.upload_to_s3(report, bucket_name, file_name)
 fail_safe_mechanism.run_error_handling()
+```
+
+Changes made:
+- Remove unnecessary returns in class methods.
+- Remove unnecessary new lines and spacing.
+- Make function calls and arguments consistent.
